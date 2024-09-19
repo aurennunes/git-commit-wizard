@@ -14,7 +14,7 @@ else
     exit 1
 fi
 
-REPO_URL="https://github.com/usuario/commit-wizard/releases/download/v1.0.0/$BINARY"
+REPO_URL="https://github.com/aurennunes/git-commit-wizard/releases/download/v1.0.0/$BINARY"
 
 echo "Baixando CommitWizard para $OS..."
 curl -L -o /usr/local/bin/commit-wizard "$REPO_URL"
