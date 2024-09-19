@@ -19,6 +19,10 @@ func main() {
 	commitType := os.Args[1]
 	scope, message := commit.ParseArgs(os.Args[2:])
 
+	if message == "-a" || message == "-amend" {
+		message = ""
+	}
+
 	commitMessage := commit.FormatCommitMessage(commitType, scope, message)
 	flags := commit.ExtractFlags(os.Args)
 
