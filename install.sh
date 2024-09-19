@@ -17,8 +17,11 @@ fi
 REPO_URL="https://github.com/aurennunes/git-commit-wizard/releases/download/v1.0.0/$BINARY"
 
 echo "Baixando CommitWizard para $OS..."
-curl -L -o /usr/local/bin/commit-wizard "$REPO_URL"
+curl -L "$REPO_URL" -o /tmp/$BINARY
 
-chmod +x /usr/local/bin/commit-wizard
+echo "Instalando CommitWizard em /usr/local/bin..."
+sudo mv /tmp/$BINARY /usr/local/bin/commit-wizard
+
+sudo chmod +x /usr/local/bin/commit-wizard
 
 echo "CommitWizard instalado com sucesso!"
