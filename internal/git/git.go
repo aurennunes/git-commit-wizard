@@ -10,8 +10,9 @@ func RunCommit(commitMessage string, flags []string) {
 	args := []string{"commit", "-m", commitMessage}
 
 	if contains(flags, "-a") {
-		args = append([]string{"add", "."}, args...)
+		args = append(args, "-a")
 	}
+
 	if contains(flags, "-amend") {
 		args = append(args, "--amend")
 	}

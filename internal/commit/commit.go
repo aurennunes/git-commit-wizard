@@ -8,8 +8,8 @@ import (
 var validCommitTypes = []string{"feat", "fix", "chore", "docs", "test", "refactor", "style", "build", "perf", "ci"}
 
 func FormatCommitMessage(commitType, scope, message string) string {
-	if scope == "" {
-		return fmt.Sprintf("%s: %s", commitType, message)
+	if message == "" {
+		return fmt.Sprintf("%s: %s", commitType, scope)
 	}
 	return fmt.Sprintf("%s(%s): %s", commitType, scope, message)
 }
