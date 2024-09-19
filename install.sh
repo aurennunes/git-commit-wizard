@@ -20,8 +20,8 @@ echo "Baixando CommitWizard para $OS..."
 curl -L "$REPO_URL" -o /tmp/$BINARY
 
 echo "Instalando CommitWizard em /usr/local/bin..."
-sudo mv /tmp/$BINARY /usr/local/bin/commit-wizard
+sudo mv /tmp/$BINARY /usr/local/bin/git-commit-wizard
 
-sudo chmod +x /usr/local/bin/commit-wizard
+sudo chmod +x /usr/local/bin/git-commit-wizard
 
 echo "CommitWizard instalado com sucesso!"
