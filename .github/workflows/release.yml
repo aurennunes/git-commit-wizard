@@ -25,7 +25,7 @@ jobs:
 
     - name: Build binary
       run: |
-        GOOS=${{ matrix.os }} GOARCH=${{ matrix.arch }} go build -o ./bin/commit-wizard-${{ matrix.os }}-${{ matrix.arch }}
+        GOOS=${{ matrix.os }} GOARCH=${{ matrix.arch }} go build -o ./bin/commit-wizard-${{ matrix.os }}-${{ matrix.arch }} cmd/commit-wizard/main.go
 
     - name: Upload binary to release
       uses: softprops/action-gh-release@v1
